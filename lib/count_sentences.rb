@@ -28,7 +28,9 @@ class String
   end
 
   def count_sentences
-    array = self.split(/[,!?]/).grep(/\S/).count
+    array = self.split(/[,!?]+/)
+    array.delete_if{|string| string.empty?}
+    array.
   end
 end
 
